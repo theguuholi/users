@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: POD
+metadata:
+  name: users-pod
+  labels:
+    component: web
+spec:
+  containers:
+    - name: users
+      image: guuhworship/users
+      ports:
+       - containerPort: 4000
