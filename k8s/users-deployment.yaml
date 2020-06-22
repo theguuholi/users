@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: users-web
+  template:
+    metadata:
+      labels:
+        component: users-web
+    spec:
+      containers:
+        - name: usersphx-web
+          image: guuhworship/users
+          ports:
+            - containerPort: 4000
