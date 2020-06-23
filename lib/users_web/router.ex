@@ -16,6 +16,7 @@ defmodule UsersWeb.Router do
   scope "/", UsersWeb do
     pipe_through :browser
     resources "/users", UserController
+    resources "/todos", TodoController
     get "/", PageController, :index
   end
 
